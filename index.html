@@ -167,122 +167,8 @@
           <div class="section-line right" aria-hidden="true"></div>
         </header>
 
-        <div class="shows-list" role="list">
-
-          <article class="show-row reveal d1" role="listitem">
-            <div class="show-date">
-              05
-              <span class="show-date-month">Jun 2026</span>
-            </div>
-            <div class="show-details">
-              <span class="show-venue">CJ Finz Raw Bar &amp; Grille</span>
-              <span class="show-meta">1st Friday · 6 PM · Manassas, VA</span>
-            </div>
-            <div class="show-cta">
-              <a
-                href="https://www.facebook.com/events/2081780749029552/"
-                target="_blank" rel="noopener noreferrer"
-                class="btn-show"
-                aria-label="Details for CJ Finz June show"
-              >Details</a>
-            </div>
-          </article>
-
-          <article class="show-row reveal d2" role="listitem">
-            <div class="show-date">
-              24
-              <span class="show-date-month">Jul 2026</span>
-            </div>
-            <div class="show-details">
-              <span class="show-venue">Monza</span>
-              <span class="show-meta">Party on the Patio · 7 PM · Manassas, VA</span>
-            </div>
-            <div class="show-cta">
-              <a
-                href="https://www.facebook.com/events/813192231090939/"
-                target="_blank" rel="noopener noreferrer"
-                class="btn-show"
-                aria-label="Details for Monza July 24 show"
-              >Details</a>
-            </div>
-          </article>
-
-          <article class="show-row reveal d3" role="listitem">
-            <div class="show-date">
-              25
-              <span class="show-date-month">Jul 2026</span>
-            </div>
-            <div class="show-details">
-              <span class="show-venue">Jiffy Lube Live</span>
-              <span class="show-meta">Pre-Concert VIP Club · 6 PM · Bristow, VA</span>
-            </div>
-            <div class="show-cta">
-              <a
-                href="https://www.facebook.com/events/1225329226468607/"
-                target="_blank" rel="noopener noreferrer"
-                class="btn-show"
-                aria-label="Details for Jiffy Lube Live show"
-              >Details</a>
-            </div>
-          </article>
-
-          <article class="show-row reveal d4" role="listitem">
-            <div class="show-date">
-              07
-              <span class="show-date-month">Aug 2026</span>
-            </div>
-            <div class="show-details">
-              <span class="show-venue">Monza</span>
-              <span class="show-meta">1st Friday · 7 PM · Manassas, VA</span>
-            </div>
-            <div class="show-cta">
-              <a
-                href="https://www.facebook.com/events/1870335256991289/"
-                target="_blank" rel="noopener noreferrer"
-                class="btn-show"
-                aria-label="Details for Monza August show"
-              >Details</a>
-            </div>
-          </article>
-
-          <article class="show-row reveal d1" role="listitem">
-            <div class="show-date">
-              11
-              <span class="show-date-month">Sep 2026</span>
-            </div>
-            <div class="show-details">
-              <span class="show-venue">Eavesdrop Brewery</span>
-              <span class="show-meta">Live Music · Manassas, VA</span>
-            </div>
-            <div class="show-cta">
-              <a
-                href="https://www.facebook.com/events/1434027324783045/"
-                target="_blank" rel="noopener noreferrer"
-                class="btn-show"
-                aria-label="Details for Eavesdrop Brewery show"
-              >Details</a>
-            </div>
-          </article>
-
-          <article class="show-row reveal d2" role="listitem">
-            <div class="show-date">
-              02
-              <span class="show-date-month">Oct 2026</span>
-            </div>
-            <div class="show-details">
-              <span class="show-venue">CJ Finz Raw Bar &amp; Grille</span>
-              <span class="show-meta">1st Friday · 6 PM · Manassas, VA</span>
-            </div>
-            <div class="show-cta">
-              <a
-                href="https://www.facebook.com/events/1640688870456950/"
-                target="_blank" rel="noopener noreferrer"
-                class="btn-show"
-                aria-label="Details for CJ Finz October show"
-              >Details</a>
-            </div>
-          </article>
-
+        <div class="shows-list" id="events-fallback" role="list">
+            <p class="no-events" style="text-align: center;">Loading upcoming shows...</p>
         </div><!-- /shows-list -->
 
         <p class="shows-more-note reveal">
@@ -624,6 +510,7 @@
        in main.js is called when ready.
        ================================================================ -->
   <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
 
 </body>
 </html>
