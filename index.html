@@ -34,7 +34,6 @@
        The overlay ensures readability and blocks YT end-screen UI.
        ================================================================ -->
   <div id="video-background" aria-hidden="true">
-    <div id="yt-player"></div>
     <div id="video-overlay"></div>
   </div>
 
@@ -87,13 +86,13 @@
           alt="Cracked Sky"
           class="hero-logo"
         />
-
-        <p class="hero-tagline">
-          90s &amp; 2000s Alternative
-          <span class="star" aria-hidden="true">★</span>
-          Grunge
-        </p>
       </div>
+
+      <p class="hero-tagline">
+        90<span class="tagline-s">s</span> &amp; 2000<span class="tagline-s">s</span> Alternative
+        <span class="star" aria-hidden="true">★</span>
+        Grunge
+      </p>
 
       <div class="hero-scroll" aria-hidden="true">
         <span class="hero-scroll-label">Scroll</span>
@@ -237,11 +236,11 @@
         </div><!-- /shows-list -->
 
         <p class="shows-more-note reveal">
-          More shows coming soon —
+          For more information on shows —
           <a
             href="https://www.facebook.com/CrackedSkyRockBand"
             target="_blank" rel="noopener noreferrer"
-          >follow on Facebook</a>
+          >Follow us on Facebook</a>
         </p>
 
       </div><!-- /container -->
@@ -264,24 +263,89 @@
           <div class="section-line right" aria-hidden="true"></div>
         </header>
 
-        <!-- Featured: YouTube channel video -->
-        <div class="video-featured reveal">
-          <iframe
-            src="https://www.youtube.com/embed/yxlXEKoRQok?rel=0&modestbranding=1&color=white"
-            title="Cracked Sky — Official Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
+        <!-- Video thumbnail grid -->
+        <div class="video-grid">
 
-        <!-- Link to full channel -->
+          <!-- Video 1 -->
+          <div class="video-thumb reveal"
+               data-youtube-id="U5FOWzkbjng"
+               role="button" tabindex="0"
+               aria-label="Play video 1">
+            <img src="https://img.youtube.com/vi/U5FOWzkbjng/hqdefault.jpg"
+                 alt="Cracked Sky — Video 1" loading="lazy" />
+            <div class="video-thumb-play" aria-hidden="true">
+              <svg viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(0,0,0,.55)"/><polygon points="29,22 55,36 29,50" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-thumb reveal d1"
+               data-youtube-id="dg0i3FQ6NLk"
+               role="button" tabindex="0"
+               aria-label="Play video 2">
+            <img src="https://img.youtube.com/vi/dg0i3FQ6NLk/hqdefault.jpg"
+                 alt="Cracked Sky — Video 2" loading="lazy" />
+            <div class="video-thumb-play" aria-hidden="true">
+              <svg viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(0,0,0,.55)"/><polygon points="29,22 55,36 29,50" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="video-thumb reveal d2"
+               data-youtube-id="QHU86OlK_J8"
+               role="button" tabindex="0"
+               aria-label="Play video 3">
+            <img src="https://img.youtube.com/vi/QHU86OlK_J8/hqdefault.jpg"
+                 alt="Cracked Sky — Video 3" loading="lazy" />
+            <div class="video-thumb-play" aria-hidden="true">
+              <svg viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(0,0,0,.55)"/><polygon points="29,22 55,36 29,50" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+          <!-- Short 1 -->
+          <div class="video-thumb reveal d1"
+               data-youtube-id="7D-OY7v_jPg"
+               data-short="true"
+               role="button" tabindex="0"
+               aria-label="Play short 1">
+            <img src="https://img.youtube.com/vi/7D-OY7v_jPg/hqdefault.jpg"
+                 alt="Cracked Sky — Short 1" loading="lazy" />
+            <div class="video-thumb-play" aria-hidden="true">
+              <svg viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(0,0,0,.55)"/><polygon points="29,22 55,36 29,50" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+          <!-- Short 2 -->
+          <div class="video-thumb reveal d2"
+               data-youtube-id="xjAsiVeGWRo"
+               data-short="true"
+               role="button" tabindex="0"
+               aria-label="Play short 2">
+            <img src="https://img.youtube.com/vi/xjAsiVeGWRo/hqdefault.jpg"
+                 alt="Cracked Sky — Short 2" loading="lazy" />
+            <div class="video-thumb-play" aria-hidden="true">
+              <svg viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(0,0,0,.55)"/><polygon points="29,22 55,36 29,50" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+          <!-- Short 3 -->
+          <div class="video-thumb reveal d3"
+               data-youtube-id="h7qnDoqrkF8"
+               data-short="true"
+               role="button" tabindex="0"
+               aria-label="Play short 3">
+            <img src="https://img.youtube.com/vi/h7qnDoqrkF8/hqdefault.jpg"
+                 alt="Cracked Sky — Short 3" loading="lazy" />
+            <div class="video-thumb-play" aria-hidden="true">
+              <svg viewBox="0 0 72 72" fill="none"><circle cx="36" cy="36" r="36" fill="rgba(0,0,0,.55)"/><polygon points="29,22 55,36 29,50" fill="#ffffff"/></svg>
+            </div>
+          </div>
+
+        </div><!-- /video-grid -->
+
         <p class="shows-more-note reveal" style="margin-top:36px;">
           More videos on
-          <a
-            href="https://www.youtube.com/@crackedskyband"
-            target="_blank" rel="noopener noreferrer"
-          >YouTube · @crackedskyband</a>
+          <a href="https://www.youtube.com/@crackedskyband" target="_blank" rel="noopener noreferrer">YouTube · @crackedskyband</a>
         </p>
 
       </div><!-- /container -->
@@ -305,115 +369,107 @@
 
         <div class="gallery-grid">
 
-          <!-- 1 — spans 2×2, hero image -->
-          <div class="gallery-cell reveal" aria-label="View artwork">
-            <img
-              src="../Cracked%20Sky%20Art%20from%20Client/IMG_0033.JPEG"
-              alt="Cracked Sky — cracked moon artwork"
-              loading="lazy"
-            />
+          <!-- 1 — spans 2×2 -->
+          <div class="gallery-cell reveal" aria-label="View photo 1">
+            <img src="assets/img/CrackedSky001.jpg" alt="Cracked Sky — photo 1" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
           <!-- 2 -->
-          <div class="gallery-cell reveal d1" aria-label="View image">
-            <img
-              src="../Cracked%20Sky%20Images/CS_moon_white_MM_WIDE.jpg"
-              alt="Cracked Sky — silhouette under the moon"
-              loading="lazy"
-            />
+          <div class="gallery-cell reveal d1" aria-label="View photo 2">
+            <img src="assets/img/CrackedSky002.jpg" alt="Cracked Sky — photo 2" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
           <!-- 3 -->
-          <div class="gallery-cell reveal d2" aria-label="View image">
-            <img
-              src="../Cracked%20Sky%20Art%20from%20Client/IMG_2544.JPEG"
-              alt="Cracked Sky — lightning storm"
-              loading="lazy"
-            />
+          <div class="gallery-cell reveal d2" aria-label="View photo 3">
+            <img src="assets/img/CrackedSky003.jpg" alt="Cracked Sky — photo 3" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
           <!-- 4 -->
-          <div class="gallery-cell reveal d3" aria-label="View image">
-            <img
-              src="../Cracked%20Sky%20Images/Sky%20Moon%20and%20Sea%20Teal.jpg"
-              alt="Cracked Sky — moon over teal sea"
-              loading="lazy"
-            />
+          <div class="gallery-cell reveal d1" aria-label="View photo 4">
+            <img src="assets/img/CrackedSky004.jpg" alt="Cracked Sky — photo 4" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
           <!-- 5 -->
-          <div class="gallery-cell reveal d1" aria-label="View image">
-            <img
-              src="../Cracked%20Sky%20Social%20Media/CSKY_FB_COVER_1.jpg"
-              alt="Cracked Sky 3.0 — band cover art"
-              loading="lazy"
-            />
+          <div class="gallery-cell reveal d2" aria-label="View photo 5">
+            <img src="assets/img/CrackedSky005.jpg" alt="Cracked Sky — photo 5" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
           <!-- 6 -->
-          <div class="gallery-cell reveal d2" aria-label="View image">
-            <img
-              src="../Cracked%20Sky%20Images/CS%20BC%20art.jpg"
-              alt="Cracked Sky — poster art with lightning"
-              loading="lazy"
-            />
+          <div class="gallery-cell reveal d3" aria-label="View photo 6">
+            <img src="assets/img/CrackedSky006.jpg" alt="Cracked Sky — photo 6" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
           <!-- 7 -->
-          <div class="gallery-cell reveal d3" aria-label="View image">
-            <img
-              src="../Cracked%20Sky%20Art%20from%20Client/CrackedSky.JPG"
-              alt="Cracked Sky — band photo"
-              loading="lazy"
-            />
+          <div class="gallery-cell reveal d1" aria-label="View photo 7">
+            <img src="assets/img/CrackedSky007.jpg" alt="Cracked Sky — photo 7" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
           <!-- 8 -->
-          <div class="gallery-cell reveal d4" aria-label="View image">
-            <img
-              src="../Cracked%20Sky%20Social%20Media/CS%20SM%203-8-25%20to%20client/CS_SM_HB_3-6-25_INSTA.jpg"
-              alt="Cracked Sky — Heritage Brewing show poster"
-              loading="lazy"
-            />
+          <div class="gallery-cell reveal d2" aria-label="View photo 8">
+            <img src="assets/img/CrackedSky008.jpg" alt="Cracked Sky — photo 8" loading="lazy" />
             <div class="gallery-hover" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="gallery-cell reveal d3" aria-label="View photo 9">
+            <img src="assets/img/CrackedSky009.jpg" alt="Cracked Sky — photo 9" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="gallery-cell reveal d1" aria-label="View photo 10">
+            <img src="assets/img/CrackedSky010.jpg" alt="Cracked Sky — photo 10" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="gallery-cell reveal d2" aria-label="View photo 11">
+            <img src="assets/img/CrackedSky011.jpg" alt="Cracked Sky — photo 11" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="gallery-cell reveal d3" aria-label="View photo 12">
+            <img src="assets/img/CrackedSky012.jpg" alt="Cracked Sky — photo 12" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+          </div>
+
+          <!-- 13 -->
+          <div class="gallery-cell reveal d4" aria-label="View photo 13">
+            <img src="assets/img/CrackedSky013.jpg" alt="Cracked Sky — photo 13" loading="lazy" />
+            <div class="gallery-hover" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
             </div>
           </div>
 
@@ -421,13 +477,27 @@
       </div><!-- /container -->
     </section><!-- /gallery -->
 
-    <!-- Lightbox overlay -->
+    <!-- Image lightbox overlay -->
     <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
       <div class="lb-inner">
         <button class="lb-close" aria-label="Close image viewer">✕&nbsp;&nbsp;Close</button>
         <img id="lb-img" src="" alt="" />
         <button class="lb-prev lb-nav" aria-label="Previous image">&#8592;</button>
         <button class="lb-next lb-nav" aria-label="Next image">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- Video lightbox overlay -->
+    <div id="video-lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+      <div class="vlb-inner">
+        <button class="vlb-close" aria-label="Close video player">✕&nbsp;&nbsp;Close</button>
+        <div class="vlb-ratio">
+          <iframe id="vlb-iframe"
+            src=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </div>
 
@@ -440,14 +510,14 @@
         <div class="footer-grid">
 
           <div class="footer-brand">
-            <img
-              src="assets/img/cracked-sky-logo001.png"
-              alt=""
-              class="footer-skull"
-              aria-hidden="true"
-              width="22" height="22"
-            />
-            <span class="footer-name">Cracked Sky</span>
+            <a href="#hero" aria-label="Back to top">
+              <img
+                src="assets/img/cracked-sky-logo001.png"
+                alt="Cracked Sky"
+                class="footer-skull"
+                width="200"
+              />
+            </a>
           </div>
 
           <nav class="footer-social" aria-label="Social media links">
@@ -481,31 +551,6 @@
               </svg>
             </a>
 
-            <!-- Instagram (placeholder — update href when available) -->
-            <a
-              href="#"
-              aria-label="Cracked Sky on Instagram"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919
-                  4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149
-                  3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584
-                  -.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644
-                  -.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919
-                  1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072
-                  -4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259
-                  .014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072
-                  4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98
-                  .059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354
-                  -2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403
-                  0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163
-                  c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209
-                  1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441
-                  .645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644
-                  -1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-
           </nav><!-- /footer-social -->
 
           <p class="footer-tag">
@@ -528,7 +573,6 @@
        YouTube IFrame API loads asynchronously; onYouTubeIframeAPIReady
        in main.js is called when ready.
        ================================================================ -->
-  <script src="https://www.youtube.com/iframe_api" async></script>
   <script src="js/main.js"></script>
 
 </body>
