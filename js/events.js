@@ -5,7 +5,7 @@ function loadEvents() {
     const eventsContainer = document.getElementById('events-fallback');
     if (!eventsContainer) return;
 
-    fetch('events.json?v=' + Date.now())
+    fetch('https://www.crackedsky.band/events.json?v=' + Date.now())
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
