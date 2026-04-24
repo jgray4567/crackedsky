@@ -205,7 +205,7 @@
                 }
                 var meta = [ev.title && ev.title.toLowerCase().indexOf('cracked sky')===-1 ? ev.title : '', tm, ev.location||''].filter(Boolean).join(' · ');
                 var card = document.createElement('article');
-                card.className = 'show-row reveal active';
+                card.className = 'show-row reveal visible';
                 card.setAttribute('role','listitem');
                 card.innerHTML = '<div class="show-date">' + dy + '<span class="show-date-month">' + mn + '</span></div><div class="show-details"><span class="show-venue">' + (ev.venue||ev.title) + '</span><span class="show-meta">' + meta + '</span></div><div class="show-cta"><a href="' + ev.url + '" target="_blank" rel="noopener noreferrer" class="btn-show">Details</a></div>';
                 c.appendChild(card);
