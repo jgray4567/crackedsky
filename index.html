@@ -171,31 +171,31 @@
             <p class="no-events" style="text-align: center;">Loading upcoming shows...</p>
         </div><!-- /shows-list -->
         <script>
-        // Inline events loader — ensures shows always render
+        // Inline events loader — flat list, no month tabs, filters out past shows
         (function() {
           var c = document.getElementById('events-fallback');
           if (!c) return;
-          var url = window.location.origin + '/events.json?v=' + Date.now();
-          console.log('[CS] Fetching events from:', url);
-          fetch(url)
-            .then(function(r) {
-              console.log('[CS] Response status:', r.status, r.ok);
-              if (!r.ok) throw new Error('fetch failed ' + r.status);
-              return r.json();
-            })
+          fetch(window.location.origin + '/events.json?v=' + Date.now())
+            .then(function(r) { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
             .then(function(events) {
-              console.log('[CS] Events loaded:', events ? events.length : 0);
-              if (!events || !events.length) { c.innerHTML = '<p class="no-events" style="text-align:center;">No upcoming shows. Check back soon!</p>'; return; }
+              if (!events || !events.length) {
+                c.innerHTML = '<p class="no-events" style="text-align:center;">No upcoming shows. Check back soon!</p>';
+                return;
+              }
               var now = new Date(); now.setHours(0,0,0,0);
-              var valid = events.map(function(e) {
-                var d = new Date(e.parsedDate || e.date || e.dateString);
-                return Object.assign({}, e, {parsedDate: d});
-              }).filter(function(e) { return isNaN(e.parsedDate.getTime()) || e.parsedDate >= now; })
+              var upcoming = events
+                .map(function(e) {
+                  var d = new Date(e.parsedDate || e.date || e.dateString);
+                  return Object.assign({}, e, {parsedDate: d});
+                })
+                .filter(function(e) { return isNaN(e.parsedDate.getTime()) || e.parsedDate >= now; })
                 .sort(function(a,b) { return a.parsedDate - b.parsedDate; });
-              console.log('[CS] Valid events after filter:', valid.length);
-              if (!valid.length) { c.innerHTML = '<p class="no-events" style="text-align:center;">No upcoming shows. Check back soon!</p>'; return; }
+              if (!upcoming.length) {
+                c.innerHTML = '<p class="no-events" style="text-align:center;">No upcoming shows. Check back soon!</p>';
+                return;
+              }
               c.innerHTML = '';
-              valid.forEach(function(ev) {
+              upcoming.forEach(function(ev) {
                 var mn = 'TBD', dy = '', tm = '';
                 if (!isNaN(ev.parsedDate.getTime())) {
                   mn = ev.parsedDate.toLocaleString('default',{month:'short'}) + ' ' + ev.parsedDate.getFullYear();
@@ -207,13 +207,13 @@
                 var card = document.createElement('article');
                 card.className = 'show-row reveal visible';
                 card.setAttribute('role','listitem');
-                card.innerHTML = '<div class="show-date">' + dy + '<span class="show-date-month">' + mn + '</span></div><div class="show-details"><span class="show-venue">' + (ev.venue||ev.title) + '</span><span class="show-meta">' + meta + '</span></div><div class="show-cta"><a href="' + ev.url + '" target="_blank" rel="noopener noreferrer" class="btn-show">Details</a></div>';
+                card.innerHTML = '<div class="show-date">' + dy + '<span class="show-date-month">' + mn + '</span></div>' +
+                  '<div class="show-details"><span class="show-venue">' + (ev.venue||ev.title) + '</span><span class="show-meta">' + meta + '</span></div>' +
+                  '<div class="show-cta"><a href="' + ev.url + '" target="_blank" rel="noopener noreferrer" class="btn-show">Details</a></div>';
                 c.appendChild(card);
               });
-              console.log('[CS] Rendered', valid.length, 'events');
             })
             .catch(function(err) {
-              console.error('[CS] Events fetch error:', err.message || err);
               c.innerHTML = '<p class="no-events" style="text-align:center;">Unable to load shows. <a href="https://www.facebook.com/CrackedSkyRockBand" style="color:#c8a250">Check Facebook</a></p>';
             });
         })();
