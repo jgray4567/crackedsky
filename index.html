@@ -511,6 +511,12 @@
        ================================================================ -->
   <script src="js/main.js"></script>
   <script src="js/events.js?v=8"></script>
+  <script>
+  // Fallback: if loadEvents didn't fire, force it
+  if (document.getElementById('events-fallback')?.innerHTML?.includes('Loading')) {
+    setTimeout(function() { if (typeof loadEvents === 'function') loadEvents(); }, 1000);
+  }
+  </script>
 
 </body>
 </html>
