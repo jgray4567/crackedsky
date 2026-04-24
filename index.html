@@ -170,6 +170,45 @@
         <div class="shows-list" id="events-fallback" role="list">
             <p class="no-events" style="text-align: center;">Loading upcoming shows...</p>
         </div><!-- /shows-list -->
+        <script>
+        // Inline events loader — ensures shows always render
+        (function() {
+          var c = document.getElementById('events-fallback');
+          if (!c) return;
+          fetch(window.location.origin + '/events.json?v=' + Date.now())
+            .then(function(r) { if (!r.ok) throw new Error('fetch failed'); return r.json(); })
+            .then(function(events) {
+              if (!events || !events.length) { c.innerHTML = '<p class="no-events" style="text-align:center;">No upcoming shows. Check back soon!</p>'; return; }
+              var now = new Date(); now.setHours(0,0,0,0);
+              var valid = events.map(function(e) {
+                var d = new Date(e.parsedDate || e.date || e.dateString);
+                return Object.assign({}, e, {parsedDate: d});
+              }).filter(function(e) { return isNaN(e.parsedDate.getTime()) || e.parsedDate >= now; })
+                .sort(function(a,b) { return a.parsedDate - b.parsedDate; });
+              if (!valid.length) { c.innerHTML = '<p class="no-events" style="text-align:center;">No upcoming shows. Check back soon!</p>'; return; }
+              c.innerHTML = '';
+              valid.forEach(function(ev) {
+                var mn = 'TBD', dy = '', tm = '';
+                if (!isNaN(ev.parsedDate.getTime())) {
+                  mn = ev.parsedDate.toLocaleString('default',{month:'short'}) + ' ' + ev.parsedDate.getFullYear();
+                  dy = ev.parsedDate.getDate().toString().padStart(2,'0');
+                  var m = (ev.date||ev.dateString||'').match(/at\s+(.+)$/i);
+                  if (m) tm = m[1];
+                }
+                var meta = [ev.title && ev.title.toLowerCase().indexOf('cracked sky')===-1 ? ev.title : '', tm, ev.location||''].filter(Boolean).join(' · ');
+                var card = document.createElement('article');
+                card.className = 'show-row reveal active';
+                card.setAttribute('role','listitem');
+                card.innerHTML = '<div class="show-date">' + dy + '<span class="show-date-month">' + mn + '</span></div><div class="show-details"><span class="show-venue">' + (ev.venue||ev.title) + '</span><span class="show-meta">' + meta + '</span></div><div class="show-cta"><a href="' + ev.url + '" target="_blank" rel="noopener noreferrer" class="btn-show">Details</a></div>';
+                c.appendChild(card);
+              });
+            })
+            .catch(function(err) {
+              console.error('Events fetch error:', err);
+              c.innerHTML = '<p class="no-events" style="text-align:center;">Unable to load shows. <a href="https://www.facebook.com/CrackedSkyRockBand" style="color:#c8a250">Check Facebook</a></p>';
+            });
+        })();
+        </script>
 
         <p class="shows-more-note reveal">
           For more information on shows —
@@ -510,13 +549,6 @@
        in main.js is called when ready.
        ================================================================ -->
   <script src="js/main.js"></script>
-  <script src="js/events.js?v=8"></script>
-  <script>
-  // Fallback: if loadEvents didn't fire, force it
-  if (document.getElementById('events-fallback')?.innerHTML?.includes('Loading')) {
-    setTimeout(function() { if (typeof loadEvents === 'function') loadEvents(); }, 1000);
-  }
-  </script>
 
 </body>
 </html>
