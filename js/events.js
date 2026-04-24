@@ -22,7 +22,7 @@ function loadEvents() {
 
             // Filter and sort events
             const validEvents = events.map(event => {
-                let d = new Date(event.parsedDate || event.date);
+                let d = new Date(event.parsedDate || event.date || event.dateString);
                 return { ...event, parsedDate: d };
             }).filter(e => {
                 if (isNaN(e.parsedDate.getTime())) return true;
@@ -65,7 +65,7 @@ function renderEventCard(event) {
         monthYearStr = `${month} ${year}`;
         dayStr = event.parsedDate.getDate().toString().padStart(2, '0');
         
-        const timeMatch = event.date.match(/at\s+(.+)$/i);
+        const timeMatch = (event.date || event.dateString || '').match(/at\s+(.+)$/i);
         if (timeMatch) {
             timeStr = timeMatch[1];
         }
