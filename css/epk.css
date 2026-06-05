@@ -1,5 +1,5 @@
 /* =============================================
-   ONE HOT MESS — EPK Stylesheet
+   CRACKED SKY — EPK Stylesheet
    Online + Print / PDF
    ============================================= */
 
@@ -1199,7 +1199,7 @@ a.epk-btn-primary:hover {
 .epk-cta-bg {
     position: absolute;
     inset: 0;
-    background-image: url('assets/gallery/ohm-37.jpg');
+    background-image: url('../assets/img/CrackedSky009.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.25) saturate(0.6);
