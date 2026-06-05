@@ -5,27 +5,17 @@
 
 /* ---- EPK-specific custom properties ---- */
 :root {
-    /* EPK Colors - Cracked Sky */
-    --epk-bg:         #060e14;
-    --epk-bg-alt:     #0a1e28;
-    --epk-bg-card:    #0e2535;
-    --epk-accent:     #d4e040;
-    --epk-accent-hover: #eaf847;
-    --epk-accent-secondary: #2a8a9e;
-    --epk-text:       #ccdde2;
-    --epk-text-dim:   #6a9aaa;
-    --epk-white:      #ffffff;
-    --epk-black:      #060e14;
-
-    /* EPK Typography */
-    --epk-font-heading: 'Barlow Condensed', sans-serif;
-    --epk-font-body:    'Barlow', sans-serif;
-
-    /* Spacing & Layout */
-    --epk-nav-h: 70px;
-    --epk-max-w: 1200px;
-    --epk-br: 6px;
-    --epk-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --epk-dark: #060e14;
+    --epk-section: #0a1e28;
+    --epk-section-alt: #0e2535;
+    --epk-accent: #d4e040;
+    --epk-accent2: #eaf847;
+    --epk-gold: #3dcbd8;
+    --epk-text: #ccdde2;
+    --epk-muted: #6a9aaa;
+    --epk-border: rgba(42,138,158,0.3);
+    --font-head: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* ---- Reset for EPK page ---- */
