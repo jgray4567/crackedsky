@@ -266,14 +266,14 @@
 .epk-btn-primary,
 a.epk-btn-primary {
     background: var(--epk-accent);
-    color: var(--epk-dark);
+    color: #0a1e28 !important;
     border: 1.5px solid var(--epk-accent);
 }
 
 .epk-btn-primary:hover,
 a.epk-btn-primary:hover {
-    background: #fff;
-    color: var(--epk-accent);
+    background: #ffffff;
+    color: #0a1e28 !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(212,224,64,0.25);
     text-decoration: none;
