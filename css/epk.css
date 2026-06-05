@@ -6,14 +6,14 @@
 /* ---- EPK-specific custom properties ---- */
 :root {
     --epk-dark: #060e14;
-    --epk-section: #0a1e28;
-    --epk-section-alt: #0e2535;
+    --epk-section: rgba(6,14,20,.88);
+    --epk-section-alt: rgba(10,30,40,.86);
     --epk-accent: #d4e040;
-    --epk-accent2: #eaf847;
-    --epk-gold: #3dcbd8;
+    --epk-accent2: #3dcbd8;
+    --epk-gold: #c8a830;
     --epk-text: #ccdde2;
     --epk-muted: #6a9aaa;
-    --epk-border: rgba(42,138,158,0.3);
+    --epk-border: #1a4d5c;
     --font-head: 'Barlow Condensed', sans-serif;
     --font-body: 'Barlow', sans-serif;
 }
