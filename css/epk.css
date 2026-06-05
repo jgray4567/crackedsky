@@ -14,8 +14,8 @@
     --epk-text: #ccdde2;
     --epk-muted: #6a9aaa;
     --epk-border: rgba(42,138,158,0.3);
-    --font-head: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-head: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
 }
 
 /* ---- Reset for EPK page ---- */
