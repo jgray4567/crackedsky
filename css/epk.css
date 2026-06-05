@@ -1539,6 +1539,15 @@ a.epk-btn-primary:hover {
         color-adjust: exact !important;
     }
 
+    
+    /* Make ideal event bullets dark in print */
+    .epk-ideal-list li {
+        color: #1a1a1a !important;
+    }
+    .epk-ideal-list li span {
+        color: #1a4d5c !important; /* Dark teal instead of bright yellow for better print contrast */
+    }
+
     /* ---- Hide screen-only elements ---- */
     .epk-nav,
     .epk-hero-scroll,
