@@ -176,10 +176,10 @@
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(5,3,1,0.55) 0%,
-        rgba(5,3,1,0.35) 30%,
-        rgba(5,3,1,0.65) 70%,
-        rgba(5,3,1,0.98) 100%
+        rgba(6,14,20,0.55) 0%,
+        rgba(6,14,20,0.35) 30%,
+        rgba(6,14,20,0.65) 70%,
+        rgba(6,14,20,0.98) 100%
     );
 }
 
@@ -198,7 +198,7 @@
     height: 120px;
     width: auto;
     margin: 0 auto;
-    filter: drop-shadow(0 2px 20px rgba(230,126,34,0.5));
+    filter: drop-shadow(0 2px 20px rgba(212,224,64,0.5));
 }
 
 .epk-hero-eyebrow {
@@ -228,7 +228,7 @@
 
 .epk-hero-sub {
     font-size: clamp(0.95rem, 2vw, 1.15rem);
-    color: rgba(240,235,228,0.85);
+    color: rgba(204,221,226,0.85);
     max-width: 640px;
     margin: 0 auto 36px;
     line-height: 1.7;
@@ -275,14 +275,14 @@ a.epk-btn-primary:hover {
     background: #fff;
     color: var(--epk-accent);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(230,126,34,0.25);
+    box-shadow: 0 8px 24px rgba(212,224,64,0.25);
     text-decoration: none;
 }
 
 .epk-btn-secondary {
     background: transparent;
     color: var(--epk-text);
-    border: 1.5px solid rgba(240,235,228,0.4);
+    border: 1.5px solid rgba(204,221,226,0.4);
 }
 
 .epk-btn-secondary:hover {
@@ -374,7 +374,7 @@ a.epk-btn-primary:hover {
    QUICK SNAPSHOT
    ============================================= */
 .epk-snapshot {
-    background: linear-gradient(135deg, rgba(18,10,4,0.98) 0%, rgba(30,20,8,0.98) 100%);
+    background: linear-gradient(135deg, rgba(6,14,20,0.98) 0%, rgba(10,30,40,0.98) 100%);
     border-top: 1px solid var(--epk-border);
     border-bottom: 1px solid var(--epk-border);
     padding: 56px 0;
@@ -471,7 +471,7 @@ a.epk-btn-primary:hover {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(230,126,34,0.1);
+    background: rgba(212,224,64,0.1);
     border: 1px solid var(--epk-border);
     border-radius: 4px;
     padding: 12px 18px;
@@ -509,7 +509,7 @@ a.epk-btn-primary:hover {
 }
 
 .epk-option-card:hover {
-    border-color: rgba(230,126,34,0.55);
+    border-color: rgba(212,224,64,0.55);
     transform: translateY(-3px);
 }
 
@@ -524,7 +524,7 @@ a.epk-btn-primary:hover {
 }
 
 .epk-option-card--featured::before {
-    background: linear-gradient(90deg, #e67e22, #f39c12, #e67e22);
+    background: linear-gradient(90deg, #d4e040, #3dcbd8, #d4e040);
 }
 
 .epk-option-icon {
@@ -569,7 +569,7 @@ a.epk-btn-primary:hover {
 
 .epk-option-list li {
     font-size: 0.88rem;
-    color: rgba(240,235,228,0.75);
+    color: rgba(204,221,226,0.75);
     display: flex;
     align-items: center;
     gap: 9px;
@@ -630,7 +630,7 @@ a.epk-btn-primary:hover {
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background: rgba(230,126,34,0.9);
+    background: rgba(212,224,64,0.9);
     border: 3px solid rgba(255,255,255,0.3);
     display: flex;
     align-items: center;
@@ -722,7 +722,7 @@ a.epk-btn-primary:hover {
 }
 
 .epk-modal-inner {
-    background: #1a1008;
+    background: #0e2535;
     border: 1px solid var(--epk-border);
     border-radius: 8px;
     padding: 48px 44px;
@@ -805,7 +805,7 @@ a.epk-btn-primary:hover {
 
 .epk-form-group input::placeholder,
 .epk-form-group textarea::placeholder {
-    color: rgba(240,235,228,0.25);
+    color: rgba(204,221,226,0.25);
 }
 
 .epk-form-group input:focus,
@@ -824,7 +824,7 @@ a.epk-btn-primary:hover {
 }
 
 .epk-form-group select option {
-    background: #1a1008;
+    background: #0e2535;
     color: var(--epk-text);
 }
 
@@ -1053,7 +1053,7 @@ a.epk-btn-primary:hover {
 .epk-photo-item-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(230,126,34,0);
+    background: rgba(212,224,64,0);
     transition: background 0.3s;
     display: flex;
     align-items: center;
@@ -1061,7 +1061,7 @@ a.epk-btn-primary:hover {
 }
 
 .epk-photo-item:hover .epk-photo-item-overlay {
-    background: rgba(230,126,34,0.15);
+    background: rgba(212,224,64,0.15);
 }
 
 /* =============================================
@@ -1166,8 +1166,8 @@ a.epk-btn-primary:hover {
 }
 
 .epk-ideal-card:hover {
-    border-color: rgba(230,126,34,0.5);
-    background: rgba(230,126,34,0.06);
+    border-color: rgba(212,224,64,0.5);
+    background: rgba(212,224,64,0.06);
     transform: translateY(-3px);
 }
 
@@ -1230,7 +1230,7 @@ a.epk-btn-primary:hover {
 
 .epk-cta-body {
     font-size: 1.05rem;
-    color: rgba(240,235,228,0.82);
+    color: rgba(204,221,226,0.82);
     margin-bottom: 40px;
     line-height: 1.75;
 }
@@ -1322,7 +1322,7 @@ a.epk-btn-primary:hover {
 
 .epk-footer-copy {
     font-size: 0.78rem;
-    color: rgba(240,235,228,0.35);
+    color: rgba(204,221,226,0.35);
     letter-spacing: 0.05em;
 }
 
@@ -1395,7 +1395,7 @@ a.epk-btn-primary:hover {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(8,4,1,0.97);
+    background: rgba(6,14,20,0.97);
     z-index: 550;
     flex-direction: column;
     align-items: center;
@@ -1421,7 +1421,7 @@ a.epk-btn-primary:hover {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(240,235,228,0.75);
+    color: rgba(204,221,226,0.75);
     padding: 14px 0;
     width: 100%;
     text-align: center;
@@ -1610,7 +1610,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-hero-eyebrow {
-        color: #b8591a !important;
+        color: #1a4d5c !important;
         font-size: 7pt !important;
         letter-spacing: 0.2em;
         margin-bottom: 6pt;
@@ -1624,7 +1624,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-hero-headline em {
-        color: #b8591a !important;
+        color: #1a4d5c !important;
     }
 
     .epk-hero-sub {
@@ -1637,7 +1637,7 @@ a.epk-btn-primary:hover {
     /* ---- Print header bar ---- */
     .epk-print-header {
         display: block !important;
-        background: #1a1006 !important;
+        background: #0e2535 !important;
         color: #fff !important;
         padding: 12pt 14pt;
         margin-bottom: 16pt;
@@ -1664,7 +1664,7 @@ a.epk-btn-primary:hover {
 
     /* ---- Snapshot print ---- */
     .epk-snapshot {
-        background: #f5f0eb !important;
+        background: #f2f6f8 !important;
         border: 1px solid #ddd !important;
         padding: 12pt 0 !important;
         break-inside: avoid;
@@ -1685,7 +1685,7 @@ a.epk-btn-primary:hover {
 
     .epk-snapshot-label {
         font-size: 6pt !important;
-        color: #b8591a !important;
+        color: #1a4d5c !important;
         letter-spacing: 0.15em;
     }
 
@@ -1715,17 +1715,17 @@ a.epk-btn-primary:hover {
     }
 
     .epk-award-badge {
-        background: #fef6ed !important;
-        border: 1px solid #e8c99a !important;
+        background: #f2f6f8 !important;
+        border: 1px solid #9bb2b8 !important;
     }
 
     .epk-award-badge span {
-        color: #7a4a12 !important;
+        color: #1a4d5c !important;
         font-size: 8pt !important;
     }
 
     .epk-section-label {
-        color: #b8591a !important;
+        color: #1a4d5c !important;
         font-size: 6.5pt !important;
     }
 
@@ -1735,7 +1735,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-divider {
-        background: #b8591a !important;
+        background: #1a4d5c !important;
     }
 
     /* ---- Performance options print ---- */
@@ -1746,14 +1746,14 @@ a.epk-btn-primary:hover {
     }
 
     .epk-option-card {
-        background: #f9f5f0 !important;
+        background: #f2f6f8 !important;
         border: 1px solid #ddd !important;
         padding: 14pt !important;
         break-inside: avoid;
     }
 
     .epk-option-card::before {
-        background: #b8591a !important;
+        background: #1a4d5c !important;
     }
 
     .epk-option-name {
@@ -1762,7 +1762,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-option-tagline {
-        color: #b8591a !important;
+        color: #1a4d5c !important;
         font-size: 7pt !important;
     }
 
@@ -1777,7 +1777,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-option-list li::before {
-        background: #b8591a !important;
+        background: #1a4d5c !important;
     }
 
     /* ---- Photo grid print ---- */
@@ -1803,7 +1803,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-song-cat-title {
-        color: #b8591a !important;
+        color: #1a4d5c !important;
         font-size: 6.5pt !important;
         border-color: #ddd !important;
     }
@@ -1838,7 +1838,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-ideal-card {
-        background: #f5f0eb !important;
+        background: #f2f6f8 !important;
         border: 1px solid #ddd !important;
         padding: 8pt !important;
         break-inside: avoid;
@@ -1851,7 +1851,7 @@ a.epk-btn-primary:hover {
 
     /* ---- Booking CTA print ---- */
     .epk-cta-section {
-        background: #1a1006 !important;
+        background: #0e2535 !important;
         padding: 20pt 0 !important;
     }
 
@@ -1863,7 +1863,7 @@ a.epk-btn-primary:hover {
     }
 
     .epk-cta-headline em {
-        color: #e88a35 !important;
+        color: #2a8a9e !important;
     }
 
     .epk-cta-body {
@@ -1883,11 +1883,11 @@ a.epk-btn-primary:hover {
     }
 
     .epk-cta-contact-item svg {
-        color: #e88a35 !important;
+        color: #2a8a9e !important;
     }
 
     .epk-cta-contact-item a {
-        color: #e8c99a !important;
+        color: #9bb2b8 !important;
     }
 
     /* ---- Page breaks ---- */
