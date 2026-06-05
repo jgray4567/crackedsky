@@ -1617,12 +1617,18 @@ a.epk-btn-primary:hover {
     }
 
     .epk-hero-logo {
-        margin-bottom: 10pt;
+        background: #0e2535 !important;
+        padding: 24pt !important;
+        margin-bottom: 20pt !important;
+        text-align: center;
+        border-bottom: 4px solid var(--epk-accent);
     }
 
     .epk-hero-logo img {
-        height: 90pt !important;
+        height: 100pt !important;
         filter: none !important;
+        margin: 0 auto;
+        display: block;
     }
 
     .epk-hero-eyebrow {
@@ -1656,7 +1662,7 @@ a.epk-btn-primary:hover {
         background: #0e2535 !important;
         color: #fff !important;
         padding: 12pt 14pt;
-        margin-bottom: 16pt;
+        margin-bottom: 0 !important;
         display: flex;
         justify-content: space-between;
         align-items: center;
