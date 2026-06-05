@@ -65,7 +65,7 @@
     position: sticky;
     top: 0;
     z-index: 500;
-    background: rgba(10,6,2,0.95);
+    background: rgba(6,14,20,0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--epk-border);
@@ -121,7 +121,7 @@
     font-family: var(--font-head);
     font-size: 0.8rem;
     letter-spacing: 0.12em;
-    color: rgba(240,235,228,0.7);
+    color: var(--epk-text-dim);
     transition: color 0.2s;
 }
 
@@ -132,7 +132,7 @@
 
 .epk-nav-links .epk-nav-cta {
     background: var(--epk-accent);
-    color: #fff;
+    color: var(--epk-dark);
     padding: 7px 18px;
     border-radius: 3px;
     font-weight: 700;
@@ -266,7 +266,7 @@
 .epk-btn-primary,
 a.epk-btn-primary {
     background: var(--epk-accent);
-    color: #fff;
+    color: var(--epk-dark);
     border: 1.5px solid var(--epk-accent);
 }
 
@@ -922,7 +922,7 @@ a.epk-btn-primary:hover {
     right: 20px;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--epk-dark);
     font-size: 2.4rem;
     line-height: 1;
     cursor: pointer;
@@ -940,7 +940,7 @@ a.epk-btn-primary:hover {
     transform: translateY(-50%);
     background: rgba(255,255,255,0.08);
     border: none;
-    color: #fff;
+    color: var(--epk-dark);
     font-size: 2.8rem;
     line-height: 1;
     cursor: pointer;
@@ -1291,7 +1291,7 @@ a.epk-btn-primary:hover {
     height: 44px;
     border-radius: 50%;
     border: 1.5px solid rgba(255,255,255,0.2);
-    color: rgba(240,235,228,0.7);
+    color: var(--epk-text-dim);
     transition: all 0.2s;
 }
 
