@@ -157,36 +157,30 @@
         <h2 class="epk-section-title" id="videos-title">Watch Cracked Sky Live</h2>
         <div class="epk-divider"></div>
 
-        <!-- Featured Video -->
-        <div class="epk-video-featured" id="epk-vid-featured" data-video="U5FOWzkbjng" role="button" tabindex="0" aria-label="Watch Cracked Sky live performance video">
-            <img src="https://img.youtube.com/vi/U5FOWzkbjng/hqdefault.jpg" alt="Cracked Sky live performance" id="epk-vid-featured-thumb">
-            <div class="epk-video-play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        </div>
-
-        <!-- Video Thumbnails -->
+        <!-- Video Grid -->
         <div class="epk-video-grid" id="epk-vid-grid" role="list" aria-label="Video thumbnails">
-            <div class="epk-vid-thumb active" data-video="U5FOWzkbjng" role="listitem" tabindex="0" aria-label="Video 1">
-                <img src="https://img.youtube.com/vi/U5FOWzkbjng/mqdefault.jpg" alt="Cracked Sky video 1" loading="lazy">
+            <div class="epk-vid-thumb" data-video="U5FOWzkbjng" role="listitem" tabindex="0" aria-label="Video 1">
+                <img src="https://img.youtube.com/vi/U5FOWzkbjng/hqdefault.jpg" alt="Cracked Sky video 1" loading="lazy">
                 <div class="epk-vid-thumb-overlay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
             </div>
             <div class="epk-vid-thumb" data-video="dg0i3FQ6NLk" role="listitem" tabindex="0" aria-label="Video 2">
-                <img src="https://img.youtube.com/vi/dg0i3FQ6NLk/mqdefault.jpg" alt="Cracked Sky video 2" loading="lazy">
+                <img src="https://img.youtube.com/vi/dg0i3FQ6NLk/hqdefault.jpg" alt="Cracked Sky video 2" loading="lazy">
                 <div class="epk-vid-thumb-overlay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
             </div>
             <div class="epk-vid-thumb" data-video="QHU86OlK_J8" role="listitem" tabindex="0" aria-label="Video 3">
-                <img src="https://img.youtube.com/vi/QHU86OlK_J8/mqdefault.jpg" alt="Cracked Sky video 3" loading="lazy">
+                <img src="https://img.youtube.com/vi/QHU86OlK_J8/hqdefault.jpg" alt="Cracked Sky video 3" loading="lazy">
                 <div class="epk-vid-thumb-overlay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
             </div>
             <div class="epk-vid-thumb" data-video="7D-OY7v_jPg" role="listitem" tabindex="0" aria-label="Video 4">
-                <img src="https://img.youtube.com/vi/7D-OY7v_jPg/mqdefault.jpg" alt="Cracked Sky video 4" loading="lazy">
+                <img src="https://img.youtube.com/vi/7D-OY7v_jPg/hqdefault.jpg" alt="Cracked Sky video 4" loading="lazy">
                 <div class="epk-vid-thumb-overlay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
             </div>
             <div class="epk-vid-thumb" data-video="xjAsiVeGWRo" role="listitem" tabindex="0" aria-label="Video 5">
-                <img src="https://img.youtube.com/vi/xjAsiVeGWRo/mqdefault.jpg" alt="Cracked Sky video 5" loading="lazy">
+                <img src="https://img.youtube.com/vi/xjAsiVeGWRo/hqdefault.jpg" alt="Cracked Sky video 5" loading="lazy">
                 <div class="epk-vid-thumb-overlay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
             </div>
             <div class="epk-vid-thumb" data-video="h7qnDoqrkF8" role="listitem" tabindex="0" aria-label="Video 6">
-                <img src="https://img.youtube.com/vi/h7qnDoqrkF8/mqdefault.jpg" alt="Cracked Sky video 6" loading="lazy">
+                <img src="https://img.youtube.com/vi/h7qnDoqrkF8/hqdefault.jpg" alt="Cracked Sky video 6" loading="lazy">
                 <div class="epk-vid-thumb-overlay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
             </div>
         </div>
@@ -278,6 +272,8 @@
 
 <!-- VIDEO LIGHTBOX -->
 <div class="epk-lightbox" id="epk-lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+    <button class="epk-lb-nav epk-lb-prev" id="epk-lb-prev" aria-label="Previous video">&#10094;</button>
+    <button class="epk-lb-nav epk-lb-next" id="epk-lb-next" aria-label="Next video">&#10095;</button>
     <div class="epk-lightbox-inner">
         <button class="epk-lightbox-close" id="epk-lb-close" aria-label="Close video">&times;</button>
         <iframe id="epk-lb-iframe" src="about:blank" frameborder="0"
@@ -427,47 +423,51 @@
 
 <script>
 (function() {
-    // ---- Video thumbnail switching ----
-    const featured = document.getElementById('epk-vid-featured');
-    const featuredThumb = document.getElementById('epk-vid-featured-thumb');
-    const thumbs = document.querySelectorAll('.epk-vid-thumb');
+    // ---- Video Grid Lightbox Navigation ----
+    const thumbs = Array.from(document.querySelectorAll('.epk-vid-thumb'));
     const lightbox = document.getElementById('epk-lightbox');
     const lbIframe = document.getElementById('epk-lb-iframe');
     const lbClose = document.getElementById('epk-lb-close');
+    const lbPrev = document.getElementById('epk-lb-prev');
+    const lbNext = document.getElementById('epk-lb-next');
 
-    let currentVideo = 'WOXf2M0SlSY';
+    let currentVideoIndex = 0;
 
-    thumbs.forEach(function(thumb) {
+    function openVideoLightbox(index) {
+        currentVideoIndex = index;
+        const vid = thumbs[index].dataset.video;
+        lbIframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        lbClose.focus();
+    }
+
+    thumbs.forEach(function(thumb, index) {
         thumb.addEventListener('click', function() {
-            const vid = this.dataset.video;
-            currentVideo = vid;
-            featuredThumb.src = 'https://img.youtube.com/vi/' + vid + '/hqdefault.jpg';
-            featured.dataset.video = vid;
-            thumbs.forEach(function(t) { t.classList.remove('active'); });
-            this.classList.add('active');
+            openVideoLightbox(index);
         });
 
         thumb.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                this.click();
+                openVideoLightbox(index);
             }
         });
     });
 
-    // Open lightbox
-    featured.addEventListener('click', function() {
-        const vid = this.dataset.video;
-        lbIframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        lbClose.focus();
+    lbPrev.addEventListener('click', function() {
+        if (currentVideoIndex > 0) {
+            openVideoLightbox(currentVideoIndex - 1);
+        } else {
+            openVideoLightbox(thumbs.length - 1); // loop
+        }
     });
 
-    featured.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.click();
+    lbNext.addEventListener('click', function() {
+        if (currentVideoIndex < thumbs.length - 1) {
+            openVideoLightbox(currentVideoIndex + 1);
+        } else {
+            openVideoLightbox(0); // loop
         }
     });
 

@@ -658,8 +658,8 @@ a.epk-btn-primary:hover {
 
 .epk-video-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
 .epk-vid-thumb {
@@ -1906,4 +1906,42 @@ a.epk-btn-primary:hover {
     .epk-section--photos { display: none !important; }
 
     .epk-songs-intro { color: #444 !important; font-size: 8.5pt !important; }
+}
+
+.epk-lb-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10,30,40,0.6);
+    color: #fff;
+    border: 1px solid var(--epk-border);
+    font-size: 2rem;
+    padding: 16px 12px;
+    cursor: pointer;
+    z-index: 2000;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+.epk-lb-nav:hover {
+    background: var(--epk-accent);
+    color: var(--epk-dark);
+}
+.epk-lb-prev { left: 20px; }
+.epk-lb-next { right: 20px; }
+
+@media (max-width: 768px) {
+    .epk-lb-nav {
+        font-size: 1.5rem;
+        padding: 12px 8px;
+    }
+    .epk-lb-prev { left: 10px; }
+    .epk-lb-next { right: 10px; }
+    .epk-video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .epk-video-grid {
+        grid-template-columns: 1fr;
+    }
 }
