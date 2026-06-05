@@ -236,9 +236,15 @@
 
 .epk-hero-btns {
     display: flex;
-    gap: 56px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
     justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+}
+.epk-hero-btns .epk-btn {
+    width: 100%;
+    max-width: 320px;
 }
 
 .epk-btn {
