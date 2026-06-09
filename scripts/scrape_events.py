@@ -140,9 +140,10 @@ async def scrape_facebook_events(url):
 
 async def main():
     url = "https://m.facebook.com/CrackedSkyRockBand/events"
-    events = await scrape_facebook_events(url)
+    scraped = await scrape_facebook_events(url)
     
     events_file = os.path.join(os.path.dirname(__file__), '..', 'events.json')
+    events_file = os.path.normpath(events_file)
     
     existing_events = []
     if os.path.exists(events_file):
@@ -151,13 +152,52 @@ async def main():
                 existing_events = json.load(f)
             except json.JSONDecodeError:
                 pass
-                
-    if events:
-        print(f"Found {len(events)} events. Updating events.json")
+    
+    # Merge: keep manual entries, add/update from Facebook, remove past events
+    from datetime import datetime, timedelta
+    
+    def is_past(event):
+        pd = event.get('parsedDate', '')
+        if not pd:
+            return False
+        try:
+            dt = datetime.fromisoformat(pd.replace('Z', '+00:00'))
+            return dt < datetime.now(dt.tzinfo) - timedelta(hours=12)
+        except (ValueError, TypeError):
+            return False
+    
+    def event_key(event):
+        title = (event.get('title') or '').strip().lower()
+        pd = event.get('parsedDate', '')[:10]
+        return f"{pd}|{title}"
+    
+    merged = {}
+    for e in existing_events:
+        if not is_past(e):
+            merged[event_key(e)] = e
+    
+    for e in scraped:
+        k = event_key(e)
+        if not is_past(e):
+            if k in merged:
+                existing_url = merged[k].get('url', '')
+                scraped_url = e.get('url', '')
+                if 'facebook.com/events/' in scraped_url and 'facebook.com/events/' not in existing_url:
+                    merged[k]['url'] = scraped_url
+            else:
+                merged[k] = e
+    
+    result = sorted(merged.values(), key=lambda e: e.get('parsedDate', '9999'))
+    
+    existing_json = json.dumps(existing_events, indent=2, ensure_ascii=False)
+    merged_json = json.dumps(result, indent=2, ensure_ascii=False)
+    
+    if existing_json != merged_json:
+        print(f"Updating events.json: {len(existing_events)} existing → {len(result)} after merge")
         with open(events_file, 'w', encoding='utf-8') as f:
-            json.dump(events, f, indent=2, ensure_ascii=False)
+            f.write(merged_json)
     else:
-        print("No events found. Keeping existing events.json unchanged.")
+        print("No changes detected. Keeping existing events.json")
 
 if __name__ == "__main__":
     asyncio.run(main())
