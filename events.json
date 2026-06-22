@@ -1,19 +1,23 @@
 [
   {
-    "date": "Fri, Jul 24 2026 at 7 PM",
-    "parsedDate": "2026-07-24T19:00:00.000Z",
+    "date": "Fri, Jul 24 2026 at 6 PM",
+    "parsedDate": "2026-07-24T18:00:00.000Z",
+    "endDate": "2026-07-24T22:00:00.000Z",
     "title": "Party on the Patio w/ Cracked Sky at Monza's",
     "venue": "Monza Italian Kitchen & Bar",
     "location": "Manassas, VA",
-    "url": "https://www.facebook.com/events/813192231090939/"
+    "url": "https://www.facebook.com/events/813192231090939/",
+    "description": "Cracked Sky — hard rock / grunge, 6-10 PM"
   },
   {
     "date": "Sat, Jul 25 2026 at 6 PM",
     "parsedDate": "2026-07-25T18:00:00.000Z",
+    "endDate": "2026-07-25T19:00:00.000Z",
     "title": "Pre Concert Party w/ Cracked Sky at Jiffy Lube Live VIP club",
     "venue": "Jiffy Lube Live",
     "location": "Bristow, VA",
-    "url": "https://www.facebook.com/events/1225329226468607/"
+    "url": "https://www.facebook.com/events/1225329226468607/",
+    "description": "Cracked Sky — VIP club pre-show, 6-7 PM"
   },
   {
     "date": "Sat, Aug 01 2026 at 5:30 PM",
@@ -23,23 +27,37 @@
     "venue": "Far Gohn Brewing Company",
     "location": "301 South East Street, Culpeper, VA 22701",
     "url": "",
-    "description": "Far Gohn Brewing presents Cracked Sky — hard rock / grunge"
+    "description": "Far Gohn Brewing presents Cracked Sky — hard rock / grunge, 5:30-9 PM"
   },
   {
-    "date": "Fri, Aug 07 2026 at 7 PM",
-    "parsedDate": "2026-08-07T19:00:00.000Z",
+    "date": "Fri, Aug 07 2026 at 6 PM",
+    "parsedDate": "2026-08-07T18:00:00.000Z",
+    "endDate": "2026-08-07T22:00:00.000Z",
     "title": "90s Rock & Grunge 1st Friday at Monza's w/ Cracked Sky",
     "venue": "Monza Italian Kitchen & Bar",
     "location": "Manassas, VA",
-    "url": "https://www.facebook.com/events/1870335256991289/"
+    "url": "https://www.facebook.com/events/1870335256991289/",
+    "description": "Cracked Sky — 1st Friday, 6-10 PM"
   },
   {
-    "date": "Fri, Sep 11 2026",
+    "date": "Sat, Aug 08 2026 at 7 PM",
+    "parsedDate": "2026-08-08T19:00:00.000Z",
+    "endDate": "2026-08-08T22:00:00.000Z",
+    "title": "Cracked Sky at Strangeways FXBG",
+    "venue": "Strangeways Brewing",
+    "location": "Fredericksburg, VA",
+    "url": "",
+    "description": "Cracked Sky — hard rock / grunge, 7-10 PM"
+  },
+  {
+    "date": "Fri, Sep 11 2026 at 6 PM",
     "parsedDate": "2026-09-11T18:00:00.000Z",
+    "endDate": "2026-09-11T21:00:00.000Z",
     "title": "Live Music: Cracked Sky @ Eavesdrop Brewery",
     "venue": "Eavesdrop Brewery",
     "location": "Yorkshire, VA",
-    "url": "https://www.facebook.com/CrackedSkyRockBand/events"
+    "url": "https://www.facebook.com/CrackedSkyRockBand/events",
+    "description": "Cracked Sky — hard rock / grunge, 6-9 PM"
   },
   {
     "date": "Fri, Oct 02 2026 at 6 PM",
@@ -48,5 +66,15 @@
     "venue": "CJ Finz Raw Bar & Grille",
     "location": "Manassas, VA",
     "url": "https://www.facebook.com/events/1640688870456950/"
+  },
+  {
+    "date": "Sat, Dec 12 2026 at 7 PM",
+    "parsedDate": "2026-12-12T19:00:00.000Z",
+    "endDate": "2026-12-12T22:00:00.000Z",
+    "title": "Cracked Sky at Strangeways FXBG",
+    "venue": "Strangeways Brewing",
+    "location": "Fredericksburg, VA",
+    "url": "",
+    "description": "Cracked Sky — hard rock / grunge, 7-10 PM"
   }
 ]
