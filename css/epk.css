@@ -1080,63 +1080,25 @@ a.epk-btn-primary:hover {
     max-width: 700px;
 }
 
-.epk-songs-grid {
+.epk-song-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 2.5rem;
 }
-
-.epk-song-category {
-    break-inside: avoid;
-    page-break-inside: avoid;
-}
-
-.epk-song-cat-title {
-    font-family: var(--font-head);
-    font-size: 0.75rem;
-    letter-spacing: 0.22em;
-    color: var(--epk-accent);
-    text-transform: uppercase;
-    margin-bottom: 14px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--epk-border);
-}
-
-.epk-song-list {
+.epk-song-col {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+    padding: 0;
+    margin: 0;
 }
-
-.epk-song-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 6px 0;
+.epk-song-col li {
+    padding: 0.45rem 0;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    gap: 12px;
-}
-
-.epk-song-list li:last-child {
-    border-bottom: none;
-}
-
-.epk-song-title {
     font-size: 0.88rem;
     color: var(--epk-text);
-    font-weight: 500;
-    flex-shrink: 0;
 }
-
-.epk-song-artist {
+.epk-song-col .epk-song-artist {
     font-size: 0.78rem;
-    color: var(--epk-muted);
-    text-align: right;
-    min-width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: var(--epk-accent);
 }
 
 .epk-songs-note {
@@ -1955,9 +1917,19 @@ a.epk-btn-primary:hover {
     .epk-video-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .epk-song-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 1.5rem;
+    }
 }
 @media (max-width: 480px) {
     .epk-video-grid {
         grid-template-columns: 1fr;
+    }
+    .epk-song-grid {
+        grid-template-columns: 1fr;
+    }
+    .epk-song-col li {
+        padding-left: 0.5rem;
     }
 }
