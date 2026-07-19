@@ -448,7 +448,7 @@ button { cursor: pointer; }
   letter-spacing: .04em;
 }
 
-.show-cta { flex-shrink: 0; }
+.show-cta { flex-shrink: 0; display: flex; gap: 8px; align-items: center; }
 .btn-show {
   display: inline-block;
   font-family: var(--f-display);
@@ -469,6 +469,15 @@ button { cursor: pointer; }
 .btn-show:hover {
   background: var(--c-yellow);
   border-color: var(--c-yellow);
+  color: var(--c-bg-deepest);
+}
+.btn-calendar {
+  border-color: rgba(42,138,158,.4);
+  color: var(--c-teal-cyan);
+}
+.btn-calendar:hover {
+  background: var(--c-teal-cyan);
+  border-color: var(--c-teal-cyan);
   color: var(--c-bg-deepest);
 }
 
@@ -827,7 +836,7 @@ footer {
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   .gallery-cell:first-child { grid-column: span 1; grid-row: span 1; aspect-ratio: 1; }
   .show-row { grid-template-columns: 90px 1fr; row-gap: 10px; }
-  .show-cta { grid-column: 1 / -1; }
+  .show-cta { grid-column: 1 / -1; justify-content: flex-start; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-tag  { grid-column: 1 / -1; text-align: center; }
 }
@@ -854,6 +863,7 @@ footer {
   .section-header { margin-bottom: 40px; }
 
   .show-row { grid-template-columns: 1fr; gap: 8px 0; padding: 20px 0; }
+  .show-cta { flex-wrap: wrap; }
   .show-date { display: flex; align-items: baseline; gap: 8px; }
   .show-date-month { display: inline; margin-top: 0; }
 

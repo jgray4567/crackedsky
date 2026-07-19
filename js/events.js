@@ -82,6 +82,35 @@ function renderEventCard(event) {
     if (event.location) metaItems.push(event.location);
     const metaLine = metaItems.join(' · ');
 
+    // Build calendar ICS link
+    let calLink = '';
+    if (!isNaN(event.parsedDate.getTime())) {
+        const pad = n => String(n).padStart(2, '0');
+        const startDT = event.parsedDate.getFullYear() + pad(event.parsedDate.getMonth()+1) + pad(event.parsedDate.getDate()) + 'T' + pad(event.parsedDate.getHours()) + pad(event.parsedDate.getMinutes()) + '00';
+        const endDate = event.endDate ? new Date(event.endDate) : null;
+        const endDT = endDate ? endDate.getFullYear() + pad(endDate.getMonth()+1) + pad(endDate.getDate()) + 'T' + pad(endDate.getHours()) + pad(endDate.getMinutes()) + '00' : startDT;
+        const icsLines = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//CrackedSky//EN',
+            'BEGIN:VEVENT',
+            'DTSTART:' + startDT,
+            'DTEND:' + endDT,
+            'SUMMARY:' + (event.venue || event.title).replace(/[,;]/g, ' '),
+            'LOCATION:' + (event.location || '').replace(/[,;]/g, ' '),
+            'DESCRIPTION:' + (event.description || event.title || '').replace(/[,;]/g, ' '),
+            'END:VEVENT',
+            'END:VCALENDAR'
+        ];
+        const ics = icsLines.join('\r\n');
+        calLink = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+    }
+
+    let ctaHtml = '<div class="show-cta">';
+    if (event.url) ctaHtml += '<a href="' + event.url + '" target="_blank" rel="noopener noreferrer" class="btn-show" aria-label="Details for ' + (event.venue || 'show') + '">Details</a>';
+    if (calLink) ctaHtml += '<a href="' + calLink + '" download="cracked-sky-show.ics" class="btn-show btn-calendar" aria-label="Save to calendar">\xF0\x9F\x93\x85 Save</a>';
+    ctaHtml += '</div>';
+
     item.innerHTML = `
         <div class="show-date">
             ${dayStr}
@@ -91,9 +120,7 @@ function renderEventCard(event) {
             <span class="show-venue">${event.venue || event.title}</span>
             <span class="show-meta">${metaLine}</span>
         </div>
-        <div class="show-cta">
-            <a href="${event.url}" target="_blank" rel="noopener noreferrer" class="btn-show" aria-label="Details for ${event.venue || 'show'}">Details</a>
-        </div>
+        ${ctaHtml}
     `;
     return item;
 }
