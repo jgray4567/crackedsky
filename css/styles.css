@@ -672,6 +672,9 @@ button { cursor: pointer; }
   .song-grid {
     grid-template-columns: 1fr;
   }
+  .song-col li {
+    padding-left: 0.5rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
