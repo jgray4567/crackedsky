@@ -480,6 +480,10 @@ button { cursor: pointer; }
   border-color: var(--c-teal-cyan);
   color: var(--c-bg-deepest);
 }
+.btn-calendar svg {
+  vertical-align: -2px;
+  margin-right: 3px;
+}
 
 .shows-more-note {
   margin-top: 44px;
