@@ -204,12 +204,24 @@
                   if (m) tm = m[1];
                 }
                 var meta = [ev.title && ev.title.toLowerCase().indexOf('cracked sky')===-1 ? ev.title : '', tm, ev.location||''].filter(Boolean).join(' · ');
+                var calUrl = '';
+                if (!isNaN(ev.parsedDate.getTime())) {
+                  var p2 = function(n) { return n < 10 ? '0' + n : '' + n; };
+                  var sDT = ev.parsedDate.getFullYear() + p2(ev.parsedDate.getMonth()+1) + p2(ev.parsedDate.getDate()) + 'T' + p2(ev.parsedDate.getHours()) + p2(ev.parsedDate.getMinutes()) + '00';
+                  var eDT = ev.endDate ? (function() { var ed = new Date(ev.endDate); return ed.getFullYear() + p2(ed.getMonth()+1) + p2(ed.getDate()) + 'T' + p2(ed.getHours()) + p2(ed.getMinutes()) + '00'; })() : sDT;
+                  var icsL = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//CrackedSky//EN','BEGIN:VEVENT','DTSTART:'+sDT,'DTEND:'+eDT,'SUMMARY:'+(ev.venue||ev.title).replace(/[,;]/g,' '),'LOCATION:'+(ev.location||'').replace(/[,;]/g,' '),'DESCRIPTION:'+(ev.description||ev.title||'').replace(/[,;]/g,' '),'END:VEVENT','END:VCALENDAR'].join(String.fromCharCode(13)+String.fromCharCode(10));
+                  calUrl = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsL);
+                }
+                var cta = '<div class="show-cta">';
+                if (ev.url) cta += '<a href="' + ev.url + '" target="_blank" rel="noopener noreferrer" class="btn-show">Details</a>';
+                if (calUrl) cta += '<a href="' + calUrl + '" download="cracked-sky-show.ics" class="btn-show btn-calendar">\ud83d\udcc5 Save</a>';
+                cta += '</div>';
                 var card = document.createElement('article');
                 card.className = 'show-row reveal visible';
                 card.setAttribute('role','listitem');
                 card.innerHTML = '<div class="show-date">' + dy + '<span class="show-date-month">' + mn + '</span></div>' +
                   '<div class="show-details"><span class="show-venue">' + (ev.venue||ev.title) + '</span><span class="show-meta">' + meta + '</span></div>' +
-                  '<div class="show-cta"><a href="' + ev.url + '" target="_blank" rel="noopener noreferrer" class="btn-show">Details</a></div>';
+                  cta;
                 c.appendChild(card);
               });
             })
