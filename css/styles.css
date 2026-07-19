@@ -474,6 +474,9 @@ button { cursor: pointer; }
 .btn-calendar {
   border-color: rgba(42,138,158,.4);
   color: var(--c-teal-cyan);
+  background: transparent;
+  font-family: var(--f-display);
+  cursor: pointer;
 }
 .btn-calendar:hover {
   background: var(--c-teal-cyan);
