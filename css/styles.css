@@ -481,7 +481,7 @@ button { cursor: pointer; }
   color: var(--c-bg-deepest);
 }
 .btn-calendar svg {
-  vertical-align: -2px;
+  vertical-align: middle;
   margin-right: 3px;
 }
 
