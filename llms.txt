@@ -1,0 +1,29 @@
+# Cracked Sky
+
+> Cracked Sky is a 4-piece hard rock and grunge band from Manassas, Virginia. They cover 90s and 2000s alternative, grunge, and post-grunge rock. The band performs live across the Northern Virginia and DMV (DC-Maryland-Virginia) area.
+
+## Genre
+Hard Rock, Grunge, Post-Grunge, Alternative Rock
+
+## Key Pages
+- [Home](https://www.crackedsky.band/)
+- [Shows / Upcoming Events](https://www.crackedsky.band/#shows)
+- [Videos](https://www.crackedsky.band/#videos)
+- [Gallery](https://www.crackedsky.band/#gallery)
+- [Song List](https://www.crackedsky.band/#songs)
+- [Electronic Press Kit (EPK)](https://www.crackedsky.band/epk.html)
+- [Events JSON (for booking/scheduling)](https://www.crackedsky.band/events.json)
+
+## Social Media
+- Facebook: https://www.facebook.com/CrackedSkyRockBand
+- YouTube: https://www.youtube.com/@crackedskyband
+
+## Booking & Contact
+- Booking inquiries: https://www.crackedsky.band/epk.html#booking
+- Follow on Facebook for show updates: https://www.facebook.com/CrackedSkyRockBand
+
+## Band Details
+- Origin: Manassas, Virginia, USA
+- Members: 4-piece band
+- Era: 90s & 2000s Alternative, Grunge, Post-Grunge
+- Repertoire: Covers of Alice in Chains, Pearl Jam, Soundgarden, Nirvana, Foo Fighters, Green Day, Weezer, Tool, Rage Against the Machine, Smashing Pumpkins, Bush, 3 Doors Down, Collective Soul, and more

@@ -1,0 +1,41 @@
+# robots.txt — Cracked Sky
+# Canonical domain: https://www.crackedsky.band/
+
+# --- Allowed AI crawlers / search bots ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Blocked AI crawlers ---
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# --- Default policy ---
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.crackedsky.band/sitemap.xml
