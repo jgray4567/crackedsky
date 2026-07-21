@@ -865,6 +865,37 @@ footer {
 }
 
 /* --------------------------------------------------------------------------
+   Footer Contact
+   -------------------------------------------------------------------------- */
+.footer-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--c-text);
+  text-decoration: none;
+  font-family: var(--f-display);
+  font-size: .85rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: color var(--t-fast) var(--ease);
+}
+.footer-contact a:hover {
+  color: var(--c-yellow);
+}
+.footer-contact a:focus-visible {
+  outline: 2px solid var(--c-yellow);
+  outline-offset: 3px;
+}
+.footer-contact svg {
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
    Keyframes
    -------------------------------------------------------------------------- */
 @keyframes fadeScroll {
