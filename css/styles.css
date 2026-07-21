@@ -895,13 +895,16 @@ footer {
   .nav-links {
     display: none;
     position: fixed;
-    inset: var(--nav-h) 0 0 0;
-    background: rgb(6,14,20);
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #060e14 !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 36px;
-    z-index: 1000;
+    z-index: 9999;
   }
   .nav-links.open { display: flex; }
   .nav-links a {
