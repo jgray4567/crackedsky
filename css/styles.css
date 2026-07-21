@@ -896,14 +896,18 @@ footer {
     display: none;
     position: fixed;
     inset: var(--nav-h) 0 0 0;
-    background: rgba(6,14,20,.97);
+    background: rgb(6,14,20);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 36px;
+    z-index: 1000;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.6rem; }
+  .nav-links a {
+    font-size: 1.6rem;
+    letter-spacing: .2em;
+  }
   .nav-toggle { display: flex; }
 
   .section { padding: 70px 0; }
